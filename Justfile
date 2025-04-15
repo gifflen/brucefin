@@ -1,7 +1,7 @@
-export repo_organization := env("GITHUB_REPOSITORY_OWNER", "yourname")
-export image_name := env("IMAGE_NAME", "yourimage")
+export repo_organization := env("GITHUB_REPOSITORY_OWNER", "gifflen")
+export image_name := env("IMAGE_NAME", "brucefin")
 export centos_version := env("CENTOS_VERSION", "stream10")
-export fedora_version := env("CENTOS_VERSION", "41")
+export fedora_version := env("CENTOS_VERSION", "42")
 export default_tag := env("DEFAULT_TAG", "latest")
 export bib_image := env("BIB_IMAGE", "quay.io/centos-bootc/bootc-image-builder:latest")
 
@@ -87,7 +87,7 @@ sudoif command *args:
 #   Hardware Enablement (HWE) is a feature that allows you to install the latest hardware support for your system.
 #   Currently this install the Hyperscale SIG kernel which will stay ahead of the CentOS Stream kernel and enables btrfs
 # GDX: https://docs.projectaurora.io/gdx/
-#   GPU Developer Experience (GDX) creates a base as an AI and Graphics platform.
+#   GPU Developer Experience (GDX) creates a bas0e as an AI and Graphics platform.
 #   Installs Nvidia drivers, CUDA, and other tools.
 #
 # The script constructs the version string using the tag and the current date.
@@ -322,7 +322,6 @@ spawn-vm rebuild="0" type="qcow2" ram="6G":
       --network-user-mode \
       --vsock=false --pass-ssh-key=false \
       -i ./output/**/*.{{ type }}
-
 
 # Runs shell check on all Bash scripts
 lint:
