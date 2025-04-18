@@ -24,3 +24,15 @@ dnf5 install -y tmux
 systemctl enable podman.socket
 
 mkdir /nix
+
+
+dnf5 copr enable pgdev/ghostty
+dnf5 install ghostty
+dnf5 copr disable pgdev/ghostty
+
+
+dnf5 install firefox
+
+dnf5 install 1password
+
+curl -sSf -L https://install.lix.systems/lix | sh -s -- install ostree
