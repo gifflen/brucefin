@@ -10,7 +10,7 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux 
+dnf5 install -y tmux
 
 # Use a COPR Example:
 #
@@ -25,14 +25,12 @@ systemctl enable podman.socket
 
 mkdir /nix
 
-
-dnf5 copr enable pgdev/ghostty
-dnf5 install ghostty
+dnf5 copr enable pgdev/ghostty -y
+dnf5 install -y ghostty
 dnf5 copr disable pgdev/ghostty
 
+dnf5 install -y firefox 
 
-dnf5 install firefox
+dnf5 install -y 1password
 
-dnf5 install 1password
-
-curl -sSf -L https://install.lix.systems/lix | sh -s -- install ostree
+#curl -sSf -L https://install.lix.systems/lix | sh -s -- install ostree
