@@ -25,11 +25,11 @@ systemctl enable podman.socket
 
 mkdir /nix
 
-dnf5 copr enable pgdev/ghostty -y
-dnf5 install -y ghostty
-dnf5 copr disable pgdev/ghostty
+#dnf5 copr enable pgdev/ghostty -y
+#dnf5 install -y ghostty
+#dnf5 copr disable pgdev/ghostty
 
-dnf5 install -y firefox 
+dnf5 install -y firefox
 
 dnf5 install -y 1password
 
