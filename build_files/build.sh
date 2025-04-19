@@ -20,11 +20,15 @@ dnf5 install -y tmux
 # dnf5 -y copr disable ublue-os/staging
 
 #### Example for enabling a System Unit File
-
 systemctl enable podman.socket
+
+echo "[root]" >>/usr/lib/ostree/prepare-root.conf
+echo "transient = true" >>/usr/lib/ostree/prepare-root.conf
 
 mkdir /nix
 
+echo "[nix]" >>/usr/lib/ostree/prepare-root.conf
+echo "transient = true" >>/usr/lib/ostree/prepare-root.conf
 #dnf5 copr enable pgdev/ghostty -y
 #dnf5 install -y ghostty
 #dnf5 copr disable pgdev/ghostty
