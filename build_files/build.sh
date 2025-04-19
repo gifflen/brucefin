@@ -35,6 +35,6 @@ echo "transient = true" >>/usr/lib/ostree/prepare-root.conf
 
 dnf5 install -y firefox
 
-dnf5 install -y 1password
+#dnf5 install -y 1password
 
 #curl -sSf -L https://install.lix.systems/lix | sh -s -- install ostree

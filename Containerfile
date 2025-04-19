@@ -15,7 +15,7 @@ FROM ghcr.io/ublue-os/bluefin-dx:latest
 # CentOS base images: quay.io/centos-bootc/centos-bootc:stream10
 
 
-COPY 1password.repo /etc/yum.repos.d/
+#COPY 1password.repo /etc/yum.repos.d/
 
 ### MODIFICATIONS
 ## make modifications desired in your image and install packages by modifying the build.sh script
